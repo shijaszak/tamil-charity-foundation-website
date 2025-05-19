@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ta-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>எங்களைப் பற்றி | About Us - Tamil Charity Foundation</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tamil: {
+                            maroon: '#8B0000',
+                            gold: '#FFD700',
+                            turmeric: '#FFC000',
+                            brown: '#4A3C31'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700&family=Mukta+Malar:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body class="font-catamaran">
+    <!-- Top Bar -->
+    <div class="bg-tamil-maroon text-white py-2 text-sm border-b border-tamil-gold/30">
+        <div class="container mx-auto px-4 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-tamil-gold hover:text-tamil-turmeric transition-colors">
+                    <i class="fas fa-file-alt mr-1"></i> அறிவிப்புகள் | Notices
+                </a>
+                <a href="mailto:contact@tamilcharity.org" class="hidden md:inline-flex items-center">
+                    <i class="far fa-envelope mr-1"></i> contact@tamilcharity.org
+                </a>
+                <a href="tel:1800-425-8622" class="hidden md:inline-flex items-center">
+                    <i class="fas fa-phone-alt mr-1"></i> 1800-425-8622
+                </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-tamil-gold hover:text-tamil-turmeric transition-colors">தமிழ்</button>
+                <span class="text-tamil-gold">|</span>
+                <button class="hover:text-tamil-turmeric transition-colors">English</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="../index.html" class="flex-shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="relative w-16 h-16 bg-gradient-to-br from-tamil-maroon/5 to-tamil-gold/5 rounded-full p-2">
+                        <img src="https://img.icons8.com/color/96/null/charity.png" alt="Tamil Charity" class="w-full h-full object-contain">
+                        <div class="absolute inset-0 bg-gradient-to-br from-tamil-gold/10 to-tamil-maroon/10 rounded-full"></div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-bold text-tamil-maroon font-mukta">அன்னதானம்</span>
+                        <span class="text-sm text-tamil-brown">Tamil Charity Foundation</span>
+                    </div>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="text-tamil-brown hover:text-tamil-maroon transition-colors">முகப்பு<span class="text-sm block">Home</span></a>
+                <a href="about.html" class="text-tamil-maroon font-bold transition-colors">எங்களைப் பற்றி<span class="text-sm block">About Us</span></a>
+                <a href="donate.html" class="text-tamil-brown hover:text-tamil-maroon transition-colors">நன்கொடை<span class="text-sm block">Donate</span></a>
+                <a href="contact.html" class="text-tamil-brown hover:text-tamil-maroon transition-colors">தொடர்பு<span class="text-sm block">Contact</span></a>
+            </div>
+            <button class="md:hidden text-tamil-maroon focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="py-16 bg-gradient-to-b from-white to-tamil-gold/5">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-tamil-maroon text-center mb-8 font-mukta">எங்களைப் பற்றி</h1>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-xl p-8 space-y-6">
+                    <p class="text-lg text-tamil-brown mb-4">
+                        அன்னதானம் என்பது தமிழ் பாரம்பரியத்தின் முக்கிய அங்கமாகும். எங்கள் அறக்கட்டளை 2010 ஆம் ஆண்டு முதல் ஆயிரக்கணக்கான குழந்தைகளுக்கு உணவு மற்றும் கல்வி உதவிகளை வழங்கி வருகிறது.
+                    </p>
+                    <p class="text-lg text-tamil-brown mb-4">
+                        Our foundation has been serving thousands of children since 2010, providing nutritious meals and educational support, keeping alive the Tamil tradition of Annadhanam (feeding the hungry).
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mt-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-tamil-maroon mb-2">50,000+</div>
+                            <p class="text-tamil-brown">Daily Meals Served</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-tamil-maroon mb-2">200+</div>
+                            <p class="text-tamil-brown">Schools Supported</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-16 bg-tamil-maroon text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 font-mukta">எங்கள் நோக்கம்</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <i class="fas fa-heart text-tamil-gold text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">அன்பு</h3>
+                    <p>Spreading love through service</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-book-reader text-tamil-gold text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">கல்வி</h3>
+                    <p>Empowering through education</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-hands-helping text-tamil-gold text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">சேவை</h3>
+                    <p>Serving the community</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918004258622" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50 whatsapp-bounce">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
