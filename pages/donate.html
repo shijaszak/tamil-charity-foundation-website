@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ta-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>நன்கொடை | Donate - Tamil Charity Foundation</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tamil: {
+                            maroon: '#8B0000',
+                            gold: '#FFD700',
+                            turmeric: '#FFC000',
+                            brown: '#4A3C31'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700&family=Mukta+Malar:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body class="font-catamaran">
+    <!-- Top Bar -->
+    <div class="bg-tamil-maroon text-white py-2 text-sm border-b border-tamil-gold/30">
+        <div class="container mx-auto px-4 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-tamil-gold hover:text-tamil-turmeric transition-colors">
+                    <i class="fas fa-file-alt mr-1"></i> அறிவிப்புகள் | Notices
+                </a>
+                <a href="mailto:contact@tamilcharity.org" class="hidden md:inline-flex items-center">
+                    <i class="far fa-envelope mr-1"></i> contact@tamilcharity.org
+                </a>
+                <a href="tel:1800-425-8622" class="hidden md:inline-flex items-center">
+                    <i class="fas fa-phone-alt mr-1"></i> 1800-425-8622
+                </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-tamil-gold hover:text-tamil-turmeric transition-colors">தமிழ்</button>
+                <span class="text-tamil-gold">|</span>
+                <button class="hover:text-tamil-turmeric transition-colors">English</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="../index.html" class="flex-shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="relative w-16 h-16 bg-gradient-to-br from-tamil-maroon/5 to-tamil-gold/5 rounded-full p-2">
+                        <img src="https://img.icons8.com/color/96/null/charity.png" alt="Tamil Charity" class="w-full h-full object-contain">
+                        <div class="absolute inset-0 bg-gradient-to-br from-tamil-gold/10 to-tamil-maroon/10 rounded-full"></div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-bold text-tamil-maroon font-mukta">அன்னதானம்</span>
+                        <span class="text-sm text-tamil-brown">Tamil Charity Foundation</span>
+                    </div>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="text-tamil-brown hover:text-tamil-maroon transition-colors">முகப்பு<span class="text-sm block">Home</span></a>
+                <a href="about.html" class="text-tamil-brown hover:text-tamil-maroon transition-colors">எங்களைப் பற்றி<span class="text-sm block">About Us</span></a>
+                <a href="donate.html" class="text-tamil-maroon font-bold transition-colors">நன்கொடை<span class="text-sm block">Donate</span></a>
+                <a href="contact.html" class="text-tamil-brown hover:text-tamil-maroon transition-colors">தொடர்பு<span class="text-sm block">Contact</span></a>
+            </div>
+            <button class="md:hidden text-tamil-maroon focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Donation Section -->
+    <section class="py-16 bg-gradient-to-b from-white to-tamil-gold/5">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-tamil-maroon text-center mb-8 font-mukta">நன்கொடை வழங்க</h1>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-xl p-8">
+                    <!-- Donation Options -->
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <button class="donation-option p-6 border-2 border-tamil-gold rounded-lg text-center hover:bg-tamil-gold/5 transition-colors">
+                            <div class="text-2xl font-bold text-tamil-maroon">₹500</div>
+                            <p class="text-tamil-brown">Feed 5 children</p>
+                        </button>
+                        <button class="donation-option p-6 border-2 border-tamil-gold rounded-lg text-center hover:bg-tamil-gold/5 transition-colors">
+                            <div class="text-2xl font-bold text-tamil-maroon">₹1000</div>
+                            <p class="text-tamil-brown">Feed 10 children</p>
+                        </button>
+                        <button class="donation-option p-6 border-2 border-tamil-gold rounded-lg text-center hover:bg-tamil-gold/5 transition-colors">
+                            <div class="text-2xl font-bold text-tamil-maroon">₹5000</div>
+                            <p class="text-tamil-brown">Feed 50 children</p>
+                        </button>
+                    </div>
+
+                    <!-- Donation Form -->
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-tamil-brown mb-2">Name / பெயர்</label>
+                                <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-tamil-gold" required>
+                            </div>
+                            <div>
+                                <label class="block text-tamil-brown mb-2">Email / மின்னஞ்சல்</label>
+                                <input type="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-tamil-gold" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-tamil-brown mb-2">Amount / தொகை</label>
+                            <input type="number" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-tamil-gold" required>
+                        </div>
+                        <div>
+                            <label class="block text-tamil-brown mb-2">Message / செய்தி</label>
+                            <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-tamil-gold h-32"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-tamil-maroon text-white font-bold py-4 rounded-lg hover:bg-tamil-maroon/90 transition-colors">
+                            Donate Now / நன்கொடை வழங்க
+                        </button>
+                    </form>
+
+                    <!-- Payment Methods -->
+                    <div class="mt-8 text-center">
+                        <p class="text-tamil-brown mb-4">Secure Payment Options</p>
+                        <div class="flex justify-center items-center gap-4">
+                            <i class="fab fa-cc-visa text-3xl text-gray-600"></i>
+                            <i class="fab fa-cc-mastercard text-3xl text-gray-600"></i>
+                            <i class="fab fa-google-pay text-3xl text-gray-600"></i>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/UPI-Logo-vector.svg" alt="UPI" class="h-8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918004258622" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50 whatsapp-bounce">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
