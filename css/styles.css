@@ -1,0 +1,267 @@
+/* Custom styles */
+:root {
+    --tamil-maroon: #8B0000;
+    --tamil-gold: #FFD700;
+    --tamil-turmeric: #FFC000;
+    --tamil-brown: #4A3C31;
+}
+
+body {
+    font-family: 'Catamaran', 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Mukta Malar', 'Montserrat', sans-serif;
+}
+
+/* Kolam Pattern Background */
+.kolam-pattern {
+    background: 
+        linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.1) 50%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.1) 50%, transparent 52%);
+    background-size: 60px 60px;
+}
+
+/* Tamil Symbols and Kolam */
+.tamil-symbols, .kolam-symbols {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.tamil-symbols .symbol {
+    position: absolute;
+    font-size: 3rem;
+    font-family: 'Mukta Malar', sans-serif;
+    color: var(--tamil-gold);
+    opacity: 0.2;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    animation: floatSymbol 8s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.tamil-symbols .symbol:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+.tamil-symbols .symbol:nth-child(2) { top: 25%; right: 15%; animation-delay: 1.5s; }
+.tamil-symbols .symbol:nth-child(3) { bottom: 20%; left: 20%; animation-delay: 3s; }
+.tamil-symbols .symbol:nth-child(4) { bottom: 30%; right: 10%; animation-delay: 4.5s; }
+.tamil-symbols .symbol:nth-child(5) { top: 50%; left: 50%; animation-delay: 6s; }
+
+.kolam-symbols .kolam-design {
+    position: absolute;
+    animation: rotatePulse 20s linear infinite;
+}
+
+.kolam-symbols .kolam-design:nth-child(1) {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.kolam-symbols .kolam-design:nth-child(2) {
+    bottom: 25%;
+    right: 20%;
+    animation-delay: -10s;
+}
+
+.kolam-design circle,
+.kolam-design path {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: drawKolam 10s linear infinite;
+}
+
+@keyframes drawKolam {
+    0% {
+        stroke-dashoffset: 300;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -300;
+    }
+}
+
+@keyframes rotatePulse {
+    0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 0.15;
+    }
+    50% {
+        transform: rotate(180deg) scale(1.1);
+        opacity: 0.25;
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        opacity: 0.15;
+    }
+}
+
+/* Enhanced Tamil text styling */
+.text-tamil-turmeric {
+    text-shadow: 0 0 10px rgba(255, 192, 0, 0.3);
+}
+
+.text-tamil-gold {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+/* Circular Images with Tamil Border Pattern */
+.circular-image {
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.circular-image::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(45deg, var(--tamil-gold), var(--tamil-turmeric));
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.circular-image:hover {
+    transform: scale(1.05);
+}
+
+.circular-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Primary Cause Section */
+.cause-circle {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    border: 2px solid var(--tamil-maroon);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, rgba(139, 0, 0, 0.05), rgba(255, 215, 0, 0.05));
+    transition: all 0.3s ease;
+}
+
+.cause-circle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(139, 0, 0, 0.1);
+}
+
+.cause-circle:hover .cause-icon {
+    color: var(--tamil-gold);
+    transform: scale(1.1);
+}
+
+.cause-circle::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(45deg, var(--tamil-gold), var(--tamil-maroon));
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.cause-icon {
+    width: 60px;
+    height: 60px;
+    color: var(--tamil-maroon);
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Impact Stories */
+.story-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    background-color: #25D366;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    background-color: #20BA5A;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: white;
+        transition: right 0.3s ease;
+        z-index: 50;
+    }
+
+    .mobile-menu.active {
+        right: 0;
+    }
+}
+
+/* Tamil-specific Typography */
+.font-mukta {
+    font-family: 'Mukta Malar', sans-serif;
+}
+
+/* Custom Button Styles */
+.btn-tamil {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-tamil::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--tamil-gold), var(--tamil-turmeric));
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.btn-tamil:hover::before {
+    opacity: 1;
+}
